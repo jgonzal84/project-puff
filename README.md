@@ -1,5 +1,6 @@
 # project-puff
 This is project #2.
+Kit
 Joe
 
 Rob
@@ -25,4 +26,4 @@ git commit -m ''
 
 git pull origin master
 ------
-
+esc :q!
