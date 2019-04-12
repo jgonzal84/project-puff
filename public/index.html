@@ -9,21 +9,34 @@
 
 <body>
 
-    <div>
+    <form>
+        <input type="text" name="strain_name" placeholder="Name Your Strain">
+
+        <button>Enter</button>
+    </form>
+
+    <div></div>
+
+    <!-- <div>
         <select id="puffInfo">
             <option value="flavor">Flavors</option>
             <option value="effect">Effects</option>
         </select>
 
         <button id="weedButton">Cannibus Info</button>
-    </div>
+    </div> -->
 
 
-    <div class="flavors"></div>
+    <!-- <div class="flavors"></div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script type="text/javascript" src="/assets/js/strain-insert.js"></script>
+    <script type="text/javascript" src="/assets/js/strain-select.js"></script>
     <script type="text/javascript">
+    getStrains();
+    </script>
+
+    <!-- <script type="text/javascript">
             var queryURL = "https://strainapi.evanbusse.com/xg3Hari/searchdata/flavors"
             // var queryURL = "https://strainapi.evanbusse.com/xg3Hari/searchdata/effects"
             // var queryURL = "https://strainapi.evanbusse.com/API_KEY/strains/search/race/Indica"
@@ -35,10 +48,10 @@
             }).then(function(response){
                 console.log(response);
                 console.log(response[0]);
-                $('.flavors').text("Flavor Name: " + response[0]);
+                // $('.flavors').text("Flavor Name: " + response[0]);
             })
                 
-    </script>
+    </script> -->
 
         <!-- var information = $('#puffInfo').val()
 
