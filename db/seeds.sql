@@ -1,1 +1,10 @@
-INSERT INTO 
+INSERT INTO strain_names (strain_name) VALUES ("Zeus");
+INSERT INTO strain_names (strain_name) VALUES ("Zilla OG");
+INSERT INTO strain_names (strain_name) VALUES ("Zeta s.a.g.e.");
+INSERT INTO strain_names (strain_name) VALUES ("Zerozero");
+INSERT INTO strain_names (strain_name) VALUES ("Afgoo");
+INSERT INTO strain_names (strain_name) VALUES ("AK-47");
+INSERT INTO strain_names (strain_name) VALUES ("Amethyst Bud");
+INSERT INTO strain_names (strain_name) VALUES ("Apollo 11");
+INSERT INTO strain_names (strain_name) VALUES ("Apocolypse");
+INSERT INTO strain_names (strain_name) VALUES ("Zkittles");
