@@ -29,22 +29,22 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-app.get('/strain', function (req, res) {
-    connection.query('SELECT * FROM strain_names', function (error, results, fields) {
-        if (error) res.send(error)
-        else res.json(results);
-    });
-});
+// app.get('/strain', function (req, res) {
+//     connection.query('SELECT * FROM strain_names', function (error, results, fields) {
+//         if (error) res.send(error)
+//         else res.json(results);
+//     });
+// });
 
-app.get('/strain-insert', function (req, res) {
-    connection.query('INSERT INTO strain_names (strain_name) VALUES (?)',
-        [req.query.strain_name], function (error, results, fields) {
-            if (error) res.send(error)
-            else res.json({
-                message: 'Puff Puff =3'
-            });
-        });
-});
+// app.get('/strain-insert', function (req, res) {
+//     connection.query('INSERT INTO strain_names (strain_name) VALUES (?)',
+//         [req.query.strain_name], function (error, results, fields) {
+//             if (error) res.send(error)
+//             else res.json({
+//                 message: 'Puff Puff =3'
+//             });
+//         });
+// });
 
 app.get('/signin', function (req, res) {
     res.render('pages/signin')
@@ -72,16 +72,28 @@ app.post('/signin', function (req, res) {
     res.send("Hit post sign in")
 });
 
-app.get('/profile', function (req, res){
+app.get('/profile', function (req, res) {
     console.log(req.session.user)
     res.render('pages/profile', req.session.user)
 })
 
-app.get('/logout', function (req, res){
+app.get('/logout', function (req, res) {
     console.log(req.session.user)
-    req.session.destroy(function(err){
+    req.session.destroy(function (err) {
         res.render('pages/index')
         // console.log(req.session.user)
+    })
+})
+
+app.get('/strains', function (req, res) {
+    connection.query('SELECT * FROM strain_names', function (error, results, fields) {
+        if (error){
+            res.send(error)
+            return
+        }
+
+        res.render('pages/strains', {results: results})  //{results} == {results: results} == {"results": results}
+        console.log(results)
     })
 })
 
