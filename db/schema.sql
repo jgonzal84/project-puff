@@ -26,9 +26,8 @@ CREATE TABLE effects (
 
 CREATE TABLE my_trees (
     id INT NOT NULL AUTO_INCREMENT,
+    my_tree VARCHAR (255),
     user_id INT NOT NULL,
-    /*strain_name VARCHAR(255) NOT NULL,*/
     FOREIGN KEY (user_id) REFERENCES users(id),
-    /*FOREIGN KEY (strain_name) REFERENCES strain_names(strain_name),*/
     PRIMARY KEY(id)
 );
