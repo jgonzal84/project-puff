@@ -42,7 +42,7 @@ app.post('/signup', function(req, res){
     //{ user_name: 'j', user_email: 'j@j', user_password: 'jjj' }
     connection.query('INSERT INTO users SET ?', req.body, function(error, results, fields){
         if (error) res.send(error)
-        else res.send("Hit post sign up")
+        else res.render('pages/profile', req.body)
     })
 });
 
