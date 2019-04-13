@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+app.use(express.urlencoded())
 app.use(express.static("public"));
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -32,9 +33,17 @@ app.get('/strain-insert', function(req, res){
     });
 });
 
+app.get('/signin', function(req, res){
+    res.render('pages/signin')
+});
+
+app.post('/signin', function(req, res){
+    console.log(req.body)
+    res.send("Hit post sign in")
+});
+
 app.get('/', function(req, res){
     res.render('pages/index')
-    
 })
 
 app.listen(4420, function(){
