@@ -39,7 +39,11 @@ app.get('/signin', function(req, res){
 
 app.post('/signup', function(req, res){
     console.log(req.body)
-    res.send("Hit post sign up")
+    //{ user_name: 'j', user_email: 'j@j', user_password: 'jjj' }
+    connection.query('INSERT INTO users SET ?', req.body, function(error, results, fields){
+        if (error) res.send(error)
+        else res.send("Hit post sign up")
+    })
 });
 
 app.get('/signup', function(req, res){
