@@ -37,6 +37,15 @@ app.get('/signin', function(req, res){
     res.render('pages/signin')
 });
 
+app.post('/signup', function(req, res){
+    console.log(req.body)
+    res.send("Hit post sign up")
+});
+
+app.get('/signup', function(req, res){
+    res.render('pages/signup')
+});
+
 app.post('/signin', function(req, res){
     console.log(req.body)
     res.send("Hit post sign in")
