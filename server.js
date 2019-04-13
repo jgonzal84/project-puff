@@ -77,6 +77,14 @@ app.get('/profile', function (req, res){
     res.render('pages/profile', req.session.user)
 })
 
+app.get('/logout', function (req, res){
+    console.log(req.session.user)
+    req.session.destroy(function(err){
+        res.render('pages/index')
+        // console.log(req.session.user)
+    })
+})
+
 app.get('/', function (req, res) {
     res.render('pages/index')
 })
