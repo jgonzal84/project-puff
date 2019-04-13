@@ -44,7 +44,6 @@ app.post('/signin', function(req, res){
 
 app.get('/', function(req, res){
     res.render('pages/index')
-    
 })
 
 app.listen(4420, function(){
