@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 
 app.use(express.static("public"));
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -21,7 +23,7 @@ app.get('/strain', function(req, res){
 });
 
 app.get('/strain-insert', function(req, res){
-    connection.query('INSERT INTO strain_names (strain_name) VALUES (?)'
+    connection.query('INSERT INTO strain_names (strain_name) VALUES (?)',
     [req.query.strain_name], function(error, results, fields){
         if (error) res.send(error)
         else res.json({
@@ -29,6 +31,11 @@ app.get('/strain-insert', function(req, res){
         });
     });
 });
+
+app.get('/', function(req, res){
+    res.render('pages/index')
+    
+})
 
 app.listen(4420, function(){
     console.log('Listening on 4420');
