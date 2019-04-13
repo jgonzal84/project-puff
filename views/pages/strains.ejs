@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../partials/head %>
+
 <body>
     <h1>Project Puff</h1>
 
-    <div></div>
+    <% results.forEach(function(strain) { %>
+        <%- include('../partials/strain', strain); %>
+    <% }); %>
 
-    <a href="/signin">Sign In</a>
-    <a href="/signup">Sign Up</a>
-    <a href="/logout">Log Out</a>
     <% include ../partials/script %>
-
-
-
 </body>
+
 </html>
