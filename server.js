@@ -76,6 +76,23 @@ app.get('/strains', function (req, res) {
     })
 })
 
+app.get('/strain_info/:name', function (req, res){
+    // req.session.num = req.session.number
+    // console.log(req.params)
+    connection.query('SELECT strains_info.strain_info, strain_names.strain_name FROM strain_names LEFT JOIN strains_info ON strains_info.strain_id = strain_names.id WHERE strain_names.strain_name = ?', [req.params.name],function (error, results, fields){
+        if (error){
+            res.send(error)
+            return
+        }
+        // res.json(results)
+        res.render('pages/strain_info', {
+            results: results[0]
+        })
+        // res.send(results)
+        console.log(results)
+    })
+})
+
 app.get('/', function (req, res) {
     res.render('pages/signin')
 })

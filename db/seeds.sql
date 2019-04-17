@@ -15,3 +15,12 @@ INSERT INTO strain_names (strain_name, image_url) VALUES
 ("Zeta", "/assets/images/nug.jpg"),
 ("Zero", "/assets/images/nug.jpg"),
 ("AK-47", "/assets/images/nug.jpg");
+
+INSERT INTO strains_info (strain_info, strain_id) VALUES
+("Sticky", 1),
+("Green", 2),
+("Sleepy", 3),
+("Bomb", 4),
+("Fire", 5);
+
+-- SELECT strain_names.strain_name, strains_info.strain_info AS info FROM strain_names LEFT JOIN strains_info ON strains_info.strain_id = strain_names.id;

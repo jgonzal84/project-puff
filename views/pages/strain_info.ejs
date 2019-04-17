@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../partials/head %>
-
 <body>
     <h1>Project Puff</h1>
-    <h2>Strains</h2>
 
+    <a href="/strains">Strains</a>
     <a href="/mystrains">My Strains</a>
     <a href="/logout">Log Out</a>
 
-    <% results.forEach(function(strain) { %>
-        <%- include('../partials/strain', strain); %>
-    <% }); %>
-
+    <p><%= results.strain_info %></p>
+    <p><%= results.strain_name %></p>
 
 
     <% include ../partials/script %>
 </body>
-
 </html>
