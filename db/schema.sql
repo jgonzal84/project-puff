@@ -15,6 +15,7 @@ CREATE TABLE users (
 CREATE TABLE strain_names (
     id INT AUTO_INCREMENT,
     strain_name VARCHAR(255),
+    image_url VARCHAR (255),
     PRIMARY KEY(id)
 );
 
