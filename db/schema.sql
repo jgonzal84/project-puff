@@ -32,3 +32,11 @@ CREATE TABLE my_trees (
     FOREIGN KEY (user_id) REFERENCES users(id),
     PRIMARY KEY(id)
 );
+
+CREATE TABLE strains_info (
+    id INT NOT NULL AUTO_INCREMENT,
+    strain_info VARCHAR (255),
+    strain_id INT NOT NULL,
+    FOREIGN KEY (strain_id) REFERENCES strain_names(id),
+    PRIMARY KEY (id)
+);
