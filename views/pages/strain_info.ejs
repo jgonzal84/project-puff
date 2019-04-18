@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../partials/head %>
+
 <body>
     <h1>Project Puff</h1>
 
@@ -8,10 +9,15 @@
     <a href="/mystrains">My Strains</a>
     <a href="/logout">Log Out</a>
 
-    <p><%= results.strain_info %></p>
-    <p><%= results.strain_name %></p>
-
+    <div>
+        <img src="<%= results.strain_image %>">
+        <p><%= results.strain_name %></p>
+        <p><%= results.strain_fact %></p>
+        <p><%= results.strain_type %></p>
+        <p><%= results.strain_taste %></p>
+    </div>
 
     <% include ../partials/script %>
 </body>
+
 </html>
