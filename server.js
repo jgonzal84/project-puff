@@ -3,11 +3,6 @@ const session = require('express-session');
 var app = express();
 
 app.use(session({
-    // genid: (req) => {
-    //     console.log('Inside the session middleware')
-    //     console.log(req.sessionID)
-    //     return uuid() // use UUIDs for session IDs
-    // },
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true
@@ -22,7 +17,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '12345678',
-    database: 'users_db'
+    database: 'puff_db'
 });
 
 connection.connect();
@@ -65,21 +60,19 @@ app.get('/logout', function (req, res) {
 })
 
 app.get('/strains', function (req, res) {
-    connection.query('SELECT * FROM strain_names', function (error, results, fields) {
+    connection.query('SELECT * FROM strains', function (error, results, fields) {
         if (error){
             res.send(error)
             return
         }
 
-        res.render('pages/strains', {results: results})  //{results} == {results: results} == {"results": results}
+        res.render('pages/strains', {results: results})
         console.log(results)
     })
 })
 
 app.get('/strain_info/:name', function (req, res){
-    // req.session.num = req.session.number
-    // console.log(req.params)
-    connection.query('SELECT strains_info.strain_info, strain_names.strain_name FROM strain_names LEFT JOIN strains_info ON strains_info.strain_id = strain_names.id WHERE strain_names.strain_name = ?', [req.params.name],function (error, results, fields){
+    connection.query('SELECT strains.strain_name, strain_info.strain_fact, strain_info.strain_type, strain_info.strain_taste, strain_info.strain_image FROM strains LEFT JOIN strain_info ON strain_info.strain_id = strains.id WHERE strains.strain_name = ?', [req.params.name],function (error, results, fields){
         if (error){
             res.send(error)
             return
