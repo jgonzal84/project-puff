@@ -6,7 +6,7 @@
     <h1>Project Puff</h1>
 
     <a href="/strains">Strains</a>
-    <a href="/mystrains">My Strains</a>
+    <a href="/my_strains">My Strains</a>
     <a href="/logout">Log Out</a>
 
     <div>
@@ -16,6 +16,10 @@
         <p><%= results.strain_type %></p>
         <p><%= results.strain_taste %></p>
     </div>
+
+    <form action="/my_strains/<%= results.id %>" method="POST">
+        <button>Add to My Trees</button>
+    </form>
 
     <% include ../partials/script %>
 </body>
