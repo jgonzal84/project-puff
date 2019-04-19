@@ -85,22 +85,26 @@ app.get('/strain_info/:name', function (req, res){
             res.send(error)
             return
         }
-        // res.json(results)
         res.render('pages/strain_info', {
             results: results[0]
         })
-        // res.send(results)
         console.log(results)
     })
 });
 
 app.get('/my_strains', function (req, res){
-    console.log(req.session.user)
-    res.render('pages/my_strains', req.session.user)
+    console.log("Inside get / my_stains", req.session.user)
+    connection.query('SELECT * FROM trees LEFT JOIN strains ON strains.id = trees.my_tree WHERE trees.user_id=?', [req.session.user.id],function (error, results){
+        if (error) {
+            res.send(error)
+            return
+        }
+        console.log(results)
+        res.json(results[0])
+    })
 });
-// this is to insert into my trees on button click
-app.post("/my_strains/:id", function(req, res){
 
+app.post("/my_strains/:id", function(req, res){
     console.log('inside post my_strains ')
     connection.query('INSERT INTO trees SET ?', {user_id: req.session.user.id, my_tree: req.params.id}, function (error, results, fields) {
         if (error) 
