@@ -63,7 +63,7 @@ app.get('/profile', function (req, res) {
 app.get('/logout', function (req, res) {
     console.log(req.session.user)
     req.session.destroy(function (err) {
-        res.render('pages/index')
+        res.render('pages/signin')
     })
 })
 
@@ -117,7 +117,7 @@ app.post("/my_strains/:id", function(req, res){
     })
 });
 
-app.get('/my_strain_delete/', function(req, res){
+app.get('/my_strain_delete', function(req, res){
     res.redirect('/my_strains')
 })
 
