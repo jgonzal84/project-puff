@@ -125,6 +125,19 @@ body {
     text-align: center
 }
 
+.profileTextCard {
+    background-color: white;
+    padding: 16px;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.profileText {
+    margin: 40px auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
 /* Strains Page */
 #strainBG {
     background-color: lightgrey
