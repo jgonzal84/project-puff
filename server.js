@@ -99,13 +99,15 @@ app.get('/my_strains', function (req, res){
             res.send(error)
             return
         }
+        res.render('pages/my_strains', {
+            results: results
+        })
         console.log(results)
-        res.json(results[0])
+        // res.json(results[0])
     })
 });
 
 app.post("/my_strains/:id", function(req, res){
-    console.log('inside post my_strains ')
     connection.query('INSERT INTO trees SET ?', {user_id: req.session.user.id, my_tree: req.params.id}, function (error, results, fields) {
         if (error) 
             res.send(error)
