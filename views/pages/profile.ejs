@@ -3,19 +3,11 @@
 <% include ../partials/head %>
 
 <body>
-
-    <div>
-        <h1 id="navPuffLogo">Project Puff</h1>
-        <h2 class="">Welcome Back <%= user_name %></h2>
+    <%- include('../partials/navbar', {user_name}); %>
+    <div class="profileTextCard">
+        <h3 class="profileText">What are you looking for?</h3>
+        <h3 class="profileText">Here are some helpful hints.</h3>
     </div>
-
-    <div class="center">
-        <a href="/strains">Strains</a>
-        <a href="/my_strains">My Strains</a>
-        <a href="/logout">Log Out</a>
-    </div>
-
-    <h3 class="center">What are you looking for?</h3>
 
     <div id="info">
         <div class="greenCard">
