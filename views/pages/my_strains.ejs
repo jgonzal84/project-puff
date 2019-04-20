@@ -6,10 +6,11 @@
     <h1>My Trees</h1>
     <h2>Put your happy little trees right here!</h2>
 
+    <a href="/profile">Profile</a>
     <a href="/strains">Strains</a>
 
     <% results.forEach(function(strain) { %>
-        <%- include('../partials/my_strain', {strain:strain}); %>
+    <%- include('../partials/my_strain', {strain:strain}); %>
     <% }); %>
 
     <% include ../partials/script %>

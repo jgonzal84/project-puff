@@ -116,12 +116,12 @@ body {
 }
 
 .indicaInfo {
-    float: left;
+    float: none;
     text-align: center
 }
 
 .hybridInfo {
-    float: none;
+    float: left;
     text-align: center
 }
 
