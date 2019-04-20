@@ -1,1 +1,11 @@
-<p><%= strain.id %></p>
+<a href=<%= "/strain_info/"+encodeURI(strain.strain_name) %>>
+    <div>
+        <div id="myStrainInfo">
+            <img id="myStrainPic" src="<%= strain.image_url %>">
+            <p><%= strain.strain_name %></p>
+            <form action="/my_strain_delete/<%= results.id %>" method="POST">
+                <button>Delete From My Trees</button>
+            </form>
+        </div>
+    </div>
+</a>
