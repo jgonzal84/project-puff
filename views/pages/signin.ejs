@@ -2,18 +2,24 @@
 <html lang="en">
 <% include ../partials/head %>
 
-<body>
-    <h1>Project Puff</h1>
-    <h2>Welcome</h2>
+<body id="sibg">
 
-    <form action="/signin" method="POST">
-        <input type="text" name="user_name" placeholder="Input User Name">
-        <input type="password" name="user_password" placeholder="Input Password">
+    <div id="signin">
+        <h1 id="header">Project Puff</h1>
 
-        <button>Sign In</button>
-    </form>
+        <div id="welcome">
+            <h2 class="white">Welcome</h2>
 
-    <p>New to Project Puff? <a href="/signup">Sign Up</a></p>
+            <form action="/signin" method="POST">
+                <input type="text" name="user_name" placeholder="Input User Name">
+                <input type="password" name="user_password" placeholder="Input Password">
+
+                <button>Sign In</button>
+            </form>
+            <p id="new">New to Project Puff? <a href="/signup">Sign Up</a></p>
+        </div>
+
+    </div>
 
     <% include ../partials/script %>
 </body>

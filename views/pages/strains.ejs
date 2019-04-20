@@ -2,15 +2,17 @@
 <html lang="en">
 <% include ../partials/head %>
 
-<body>
-    <h1>Project Puff</h1>
-    <h2>Strains</h2>
+<body id="strainBG">
+    <h1 id="pTitle">Project Puff</h1>
+    <h2 class="center">Strains</h2>
 
-    <a href="/my_strains">My Strains</a>
-    <a href="/logout">Log Out</a>
+    <div class="center">
+        <a href="/my_strains">My Strains</a>
+        <a href="/logout">Log Out</a>
+    </div>
 
     <% results.forEach(function(strain) { %>
-        <%- include('../partials/strain', strain); %>
+    <%- include('../partials/strain', strain); %>
     <% }); %>
 
     <% include ../partials/script %>
