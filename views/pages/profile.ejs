@@ -2,10 +2,12 @@
 <html lang="en">
 <% include ../partials/head %>
 
-<body id="profileBG">
+<body>
 
-    <h1 id="pTitle">Project Puff</h1>
-    <h2 class="center">Welcome Back <%= user_name %></h2>
+    <div>
+        <h1 id="navPuffLogo">Project Puff</h1>
+        <h2 class="">Welcome Back <%= user_name %></h2>
+    </div>
 
     <div class="center">
         <a href="/strains">Strains</a>
@@ -16,45 +18,41 @@
     <h3 class="center">What are you looking for?</h3>
 
     <div id="info">
-        <div class="sativaInfo">
-            <div class="card" style="width: 18rem;">
-                <img src="/assets/images/sativa.jpg" class="card-img-top" alt="Sativa Leaf">
-                <div class="card-body">
-                    <h5 class="card-title">Sativa</h5>
-                    <p class="card-text">High THC Level</p>
-                    <p class="card-text">Best suited for day use</p>
-                    <p class="card-text">Energetic and uplifting</p>
-                    <p class="card-text">Relieves depression</p>
-                    <p class="card-text">Slender leaf shape</p>
-                    <p class="card-text">Flavor is typically earthy</p>
-                </div>
+        <div class="greenCard">
+            <img src="/assets/images/sativa.jpg" class="green-card-img-top" alt="Sativa Leaf">
+            <div class="card-body">
+                <h5 class="card-title">Sativa</h5>
+                <p class="card-text">High THC Level</p>
+                <p class="card-text">Best suited for day use</p>
+                <p class="card-text">Energetic and uplifting</p>
+                <p class="card-text">Relieves depression</p>
+                <p class="card-text">Slender leaf shape</p>
+                <p class="card-text">Flavor is typically earthy</p>
             </div>
         </div>
-        <div class="hybridInfo">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/images/hybrid.jpg" class="card-img-top" alt="Hybrid Leaf">
-                    <div class="card-body">
-                        <h5 class="card-title">Hybrid</h5>
-                        <p class="card-text">Created to achieve desired traits</p>
-                        <p class="card-text">Varied leaf shape</p>
-                        <p class="card-text">Variety of flavors</p>
-                    </div>
-                </div>
-            </div>
-        <div class="indicaInfo">
-            <div class="card" style="width: 18rem;">
-                <img src="/assets/images/indica.jpg" class="card-img-top" alt="Indica Leaf">
-                <div class="card-body">
-                    <h5 class="card-title">Indica</h5>
-                    <p class="card-text">High CBD Level</p>
-                    <p class="card-text">Best suited for night use</p>
-                    <p class="card-text">Calming, sedating and relaxing</p>
-                    <p class="card-text">Reduces anxiety and pain</p>
-                    <p class="card-text">Wide leaf shape</p>
-                    <p class="card-text">Flavor is typically sweet</p>
-                </div>
+
+        <div class="greenCard">
+            <img src="/assets/images/indica.jpg" class="green-card-img-top" alt="Indica Leaf">
+            <div class="card-body">
+                <h5 class="card-title">Indica</h5>
+                <p class="card-text">High CBD Level</p>
+                <p class="card-text">Best suited for night use</p>
+                <p class="card-text">Calming, sedating and relaxing</p>
+                <p class="card-text">Reduces anxiety and pain</p>
+                <p class="card-text">Wide leaf shape</p>
+                <p class="card-text">Flavor is typically sweet</p>
             </div>
         </div>
+        <div class="greenCard">
+            <img src="/assets/images/hybrid.jpg" class="green-card-img-top" alt="Hybrid Leaf">
+            <div class="card-body">
+                <h5 class="card-title">Hybrid</h5>
+                <p class="card-text">Created to achieve desired traits</p>
+                <p class="card-text">Varied leaf shape</p>
+                <p class="card-text">Variety of flavors</p>
+            </div>
+        </div>
+
     </div>
     <% include ../partials/script %>
 </body>
