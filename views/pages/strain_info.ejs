@@ -3,13 +3,14 @@
 <% include ../partials/head %>
 
 <body>
+    <%- include('../partials/navbar', {user_name}); %>
     <h1>Project Puff</h1>
 
     <a href="/strains">Strains</a>
     <a href="/my_strains">My Strains</a>
     <a href="/logout">Log Out</a>
 
-    <div>
+    <div class="container">
         <img src="<%= results.strain_image %>">
         <p><%= results.strain_name %></p>
         <p><%= results.strain_fact %></p>

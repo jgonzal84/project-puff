@@ -25,7 +25,7 @@ body {
     
 #signIn-signUp-card {
     border: 2px solid;
-    height: 275px;
+    height: auto;
     width: 30%;
     margin: 0 auto;
     /* background-color:#56ab2f; */
@@ -47,6 +47,12 @@ body {
     height : 100px;
     border-radius: 100%;
     transform: translate(-25px, -25px);
+}
+
+#strainsGrid {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .greenCard {
