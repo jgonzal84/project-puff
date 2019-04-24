@@ -6,20 +6,16 @@
 
     <%- include('../partials/navbar', {user_name}); %>
     <div id="strainsGrid" class="container">
-        <div>
-            <h1 id="pTitle">Project Puff</h1>
-            <h2 class="center">Strains</h2>
-            <a href="/profile">Profile</a>
-            <a href="/my_strains">My Strains</a>
-            <a href="/logout">Log Out</a>
-
-
+        <h1 id="pTitle">Project Puff</h1>
+        <h2 class="center">Strains</h2>
+        <div id="strainWrapper">
             <% results.forEach(function(strain) { %>
             <%- include('../partials/strain', strain); %>
             <% }); %>
-            <% include ../partials/script %>
+            
         </div>
     </div>
+    <% include ../partials/script %>
 </body>
 
 </html>
