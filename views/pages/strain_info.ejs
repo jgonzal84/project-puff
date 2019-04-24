@@ -4,21 +4,23 @@
 
 <body>
     <%- include('../partials/navbar', {user_name}); %>
-    
+
 
 
     <div id="strainInfoGrid" class="container">
         <h1>Project Puff</h1>
+        <h3>Strain Bio</h3>
         <img src="<%= results.strain_image %>">
-        <p><%= results.strain_name %></p>
-        <p><%= results.strain_fact %></p>
-        <p><%= results.strain_type %></p>
-        <p><%= results.strain_taste %></p>
-    
+        <div class="strainInfoResultsParagraph">
+            <p><%= results.strain_name %></p>
+            <p><%= results.strain_fact %></p>
+            <p><%= results.strain_type %></p>
+            <p><%= results.strain_taste %></p>
+        </div>
 
-    <form action="/my_strains/<%= results.id %>" method="POST">
-        <button>Add to My Trees</button>
-    </form>
+        <form action="/my_strains/<%= results.id %>" method="POST">
+            <button>Add to My Trees</button>
+        </form>
     </div>
     <% include ../partials/script %>
 </body>
