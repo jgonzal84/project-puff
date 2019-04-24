@@ -74,7 +74,7 @@ app.get('/strains', function (req, res) {
             return
         }
 
-        res.render('pages/strains', {results: results})
+        res.render('pages/strains', {user_name: req.session.user.user_name, results: results})
         console.log(results)
     })
 })
@@ -86,7 +86,7 @@ app.get('/strain_info/:name', function (req, res){
             return
         }
         res.render('pages/strain_info', {
-            results: results[0]
+            user_name: req.session.user.user_name, results: results[0]
         })
         console.log(results)
     })
@@ -100,7 +100,7 @@ app.get('/my_strains', function (req, res){
             return
         }
         res.render('pages/my_strains', {
-            results: results
+            user_name: req.session.user.user_name, results: results
         })
         console.log(results)
         // res.json(results[0])

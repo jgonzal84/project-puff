@@ -3,18 +3,34 @@
 <% include ../partials/head %>
 
 <body>
-    <div class="myStrainsTextTop">
-        <h1>My Trees</h1>
-        <h2>Put your happy little trees right here!</h2>
+    <%- include('../partials/navbar', {user_name}); %>
+    <div id="myStrainsGrid" class="container">
+        <h1 class="center">My Trees</h1>
+        <h2 class="center">Put your happy little trees right here!</h2>
+        <img id="bobRoss" src="/assets/images/bobRoss.jpg" alt="">
+        <div id="myStrainWrapper">
+            <% results.forEach(function(strain) { %>
+            <%- include('../partials/my_strain', {strain:strain}); %>
+            <% }); %>
+        </div>
     </div>
-    <a href="/profile">Profile</a>
-    <a href="/strains">Strains</a>
-
-    <% results.forEach(function(strain) { %>
-    <%- include('../partials/my_strain', {strain:strain}); %>
-    <% }); %>
-
     <% include ../partials/script %>
 </body>
 
 </html>
+
+<!-- <%- include('../partials/navbar', {user_name}); %>
+    <div id="strainsGrid" class="container">
+        <h1 id="pTitle">Project Puff</h1>
+        <h2 class="center">Strains</h2>
+        <div id="strainWrapper">
+            <% results.forEach(function(strain) { %>
+            <%- include('../partials/strain', strain); %>
+            <% }); %>
+            
+        </div>
+    </div>
+    <% include ../partials/script %>
+</body>
+
+</html> -->

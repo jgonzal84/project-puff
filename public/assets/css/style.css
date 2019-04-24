@@ -49,6 +49,17 @@ body {
     transform: translate(-25px, -25px);
 }
 
+#strainInfoGrid {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#myStrainsGrid {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 #strainsGrid {
     background: #ad5389;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
@@ -158,7 +169,6 @@ body {
 
 #strainInfo {
     text-align: center;
-    float: left;
     margin-top: 20px;
     margin-left: 50px
 }
@@ -167,4 +177,30 @@ img {
     border-radius: 100%;
     width : 100px;
     height : 100px;
+}
+
+#bobRoss {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    width : 140px;
+    height : 140px;
+}
+
+#strainInfoWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#myStrainWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+#strainWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
