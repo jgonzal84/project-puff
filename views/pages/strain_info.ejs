@@ -7,7 +7,7 @@
 
 
 
-    <div id="strainInfoGrid" class="container">
+    <div id="strainInfoGrid" class="container p-4">
         <h1>Project Puff</h1>
         <h3>Strain Bio</h3>
         <img src="<%= results.strain_image %>">
@@ -19,7 +19,7 @@
         </div>
 
         <form action="/my_strains/<%= results.id %>" method="POST">
-            <button>Add to My Trees</button>
+            <button class="btn btn-success">Add to My Trees</button>
         </form>
     </div>
     <% include ../partials/script %>
